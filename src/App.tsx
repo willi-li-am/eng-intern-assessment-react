@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { THEME } from "./constants";
 import StopWatch from "./StopWatch";
 
 export default function App() {
@@ -21,32 +20,34 @@ export default function App() {
     }
     return () => clearInterval(interval);
   }, [running]);
-  const startWatch = () => {
+
+  const startWatch = (): void => {
     setRunning(true);
   };
 
-  const stopWatch = () => [setRunning(false)];
+  const stopWatch = (): void => {setRunning(false)};
 
-  const clearWatch = () => {
+  const clearWatch = (): void => {
     setLapse([]);
     setCurrentTime(0);
   };
 
-  const newLapse = () => {
-    setLapse([...lapse, currentTime]);
-    setCurrentTime(0);
+  const newLapse = (): void => {
+    if(currentTime != 0) {
+      setLapse([...lapse, currentTime]);
+      setCurrentTime(0);
+    }
   };
   return (
     <div
       style={{
         backgroundColor: "black",
-        height: "100vh",
-        width: "100vw",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         fontFamily: "Roboto",
         overflow: "auto",
+        padding: "20px"
       }}
     >
       <StopWatch

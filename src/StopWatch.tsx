@@ -1,7 +1,6 @@
 import React from "react";
 import StopWatchButton from "./StopWatchButton";
-import { THEME } from "./constants";
-import DisplayTime from "./timer";
+import {DisplayTime, LapseView} from "./timer";
 
 export default function StopWatch({
   currentTime,
@@ -17,13 +16,12 @@ export default function StopWatch({
       style={{
         backgroundColor: "black",
         width: "70vw",
-        height: "80vh",
+        height: "calc(100vh - 40px)",
         borderRadius: "10px",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
         color: "white",
-        padding: "15px",
         gap: "10px",
       }}
     >
@@ -43,11 +41,7 @@ export default function StopWatch({
           margin: "20px",
         }}
       ></div>
-      <div>
-        {lapse.map((time: number, index: number) => {
-          return <DisplayTime currentTime={time} />;
-        })}
-      </div>
+      <LapseView lapse={lapse}></LapseView>
     </div>
   );
 }

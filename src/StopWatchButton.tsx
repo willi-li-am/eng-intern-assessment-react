@@ -74,7 +74,7 @@ export default function StopWatchButton({
         <WatchButton
           hoverColor="#901C1A"
           color="#621413"
-          textColor="#72899D"
+          textColor="#BF2522"
           onClick={stopWatch}
         >
           Stop
