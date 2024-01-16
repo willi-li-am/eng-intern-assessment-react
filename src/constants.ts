@@ -1,3 +1,3 @@
-const THEME: string[] = ["#4C3A51", "#774360", "#B25068", "#E7AB79"];
+const THEME: string[] = ["#0C134F", "#1D267D", "#5C469C", "#D4ADFC"];
 
 export { THEME };
