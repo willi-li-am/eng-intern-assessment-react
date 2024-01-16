@@ -1,4 +1,4 @@
-import React, { ReactNode, MouseEvent } from "react";
+import React, { MouseEvent } from "react";
 import StopWatchButton from "./StopWatchButton";
 import { DisplayTime, LapseView } from "./timer";
 
