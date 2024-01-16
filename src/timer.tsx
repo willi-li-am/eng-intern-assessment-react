@@ -19,7 +19,12 @@ const displayMinutes = (currentTime: number): string => {
   return reformat(minutes);
 };
 
-const LapseItem = ({ time, index }: any) => {
+interface LapseItemProps {
+  time: number;
+  index: number;
+}
+
+const LapseItem = ({ time, index }: LapseItemProps) => {
   return (
     <div style={{ padding: "10px" }}>
       <div
@@ -51,7 +56,11 @@ const LapseItem = ({ time, index }: any) => {
   );
 };
 
-const LapseView = ({ lapse }: any) => {
+interface LapseViewProps {
+  lapse: number[];
+}
+
+const LapseView = ({ lapse }: LapseViewProps) => {
   const reverseLapse = lapse.slice().reverse();
   return (
     <div style={{ overflow: "auto", width: "100%" }}>
@@ -68,7 +77,11 @@ const LapseView = ({ lapse }: any) => {
   );
 };
 
-const DisplayTime = ({ currentTime }: any) => {
+interface DisplayTimeProps {
+  currentTime: number;
+}
+
+const DisplayTime = ({ currentTime }: DisplayTimeProps) => {
   return (
     <div
       style={{
