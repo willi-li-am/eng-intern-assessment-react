@@ -21,12 +21,12 @@ const DisplayTime = ({currentTime}: any) => {
         return reformat(minutes)
       }
     return (
-        <div style={{display: 'flex', gap: '5px', fontSize: "50px", userSelect: 'none'}}>
-            <div style={{width: "60px", textAlign: "center"}}>{displayMinutes(currentTime)}</div>
+        <div style={{display: 'flex', gap: '5px', fontSize: "120px", userSelect: 'none'}}>
+            <div style={{width: "auto", textAlign: "center"}}>{displayMinutes(currentTime)}</div>
             <div>:</div>
-            <div style={{width: "60px", textAlign: "center"}}>{displaySeconds(currentTime)}</div>
+            <div style={{width: "auto", textAlign: "center"}}>{displaySeconds(currentTime)}</div>
             <div>:</div>
-            <div style={{width: "60px", textAlign: "center"}}>{displayMilliseconds(currentTime)}</div>
+            <div style={{width: "auto", textAlign: "center"}}>{displayMilliseconds(currentTime)}</div>
         </div>
     )
 }
