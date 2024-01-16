@@ -25,7 +25,9 @@ export default function App() {
     setRunning(true);
   };
 
-  const stopWatch = (): void => {setRunning(false)};
+  const stopWatch = (): void => {
+    setRunning(false);
+  };
 
   const clearWatch = (): void => {
     setLapse([]);
@@ -33,7 +35,7 @@ export default function App() {
   };
 
   const newLapse = (): void => {
-    if(currentTime != 0) {
+    if (currentTime != 0) {
       setLapse([...lapse, currentTime]);
       setCurrentTime(0);
     }
@@ -47,7 +49,7 @@ export default function App() {
         alignItems: "center",
         fontFamily: "Roboto",
         overflow: "auto",
-        padding: "20px"
+        padding: "20px",
       }}
     >
       <StopWatch

@@ -1,6 +1,6 @@
 import React from "react";
 import StopWatchButton from "./StopWatchButton";
-import {DisplayTime, LapseView} from "./timer";
+import { DisplayTime, LapseView } from "./timer";
 
 export default function StopWatch({
   currentTime,
