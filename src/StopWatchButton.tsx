@@ -1,4 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, ReactNode, MouseEvent } from "react";
+
+interface WatchButtonProps {
+  children: ReactNode;
+  color: string;
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  hoverColor: string;
+  textColor: string;
+}
 
 const WatchButton = ({
   children,
@@ -6,7 +14,7 @@ const WatchButton = ({
   onClick,
   hoverColor,
   textColor,
-}: any) => {
+}: WatchButtonProps) => {
   const [hovered, setHovered] = useState(false);
   return (
     <div
@@ -45,13 +53,21 @@ const WatchButton = ({
   );
 };
 
+interface StopWatchButtonProps {
+  running: boolean;
+  startWatch: (event: MouseEvent<HTMLButtonElement>) => void;
+  stopWatch: (event: MouseEvent<HTMLButtonElement>) => void;
+  clearWatch: (event: MouseEvent<HTMLButtonElement>) => void;
+  newLapse: (event: MouseEvent<HTMLButtonElement>) => void;
+}
+
 export default function StopWatchButton({
   running,
   startWatch,
   stopWatch,
   clearWatch,
   newLapse,
-}: any) {
+}: StopWatchButtonProps) {
   return (
     <div style={{ display: "flex", gap: "80px" }}>
       <WatchButton

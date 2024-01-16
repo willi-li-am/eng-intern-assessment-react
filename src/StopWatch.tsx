@@ -1,6 +1,16 @@
-import React from "react";
+import React, { ReactNode, MouseEvent } from "react";
 import StopWatchButton from "./StopWatchButton";
 import { DisplayTime, LapseView } from "./timer";
+
+interface StopWatchProps {
+  currentTime: number;
+  lapse: number[];
+  running: boolean;
+  startWatch: (event: MouseEvent<HTMLButtonElement>) => void;
+  stopWatch: (event: MouseEvent<HTMLButtonElement>) => void;
+  clearWatch: (event: MouseEvent<HTMLButtonElement>) => void;
+  newLapse: (event: MouseEvent<HTMLButtonElement>) => void;
+}
 
 export default function StopWatch({
   currentTime,
@@ -10,7 +20,7 @@ export default function StopWatch({
   stopWatch,
   clearWatch,
   newLapse,
-}: any) {
+}: StopWatchProps) {
   return (
     <div
       style={{
