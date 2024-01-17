@@ -84,7 +84,7 @@ export default function StopWatchButton({
         textColor="#849EB6"
         onClick={newLapse}
       >
-        Lapse
+        Lap
       </WatchButton>
       {running ? (
         <WatchButton

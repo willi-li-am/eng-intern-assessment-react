@@ -32,12 +32,12 @@ export default function App() {
   const clearWatch = (): void => {
     setLapse([]);
     setCurrentTime(0);
+    stopWatch()
   };
 
   const newLapse = (): void => {
     if (currentTime != 0) {
       setLapse([...lapse, currentTime]);
-      setCurrentTime(0);
     }
   };
   return (
